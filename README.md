@@ -60,37 +60,5 @@ flowchart TD
 │   ├── config.h               # Network placeholders and topic configurations
 │   └── secure_iot_gateway.ino # Main execution state-machine sequencer and callbacks
 └── Documentation/
-
-## ⚙️ Step 2: Create the Secure Code Snippets
-
-Instead of a single large file, splitting your code into two modular files makes you look like a highly structured software engineer.
-
-### File 1: Create `config.h`
-Create a new file in your repository named `config.h`. This shows how you handle configuration parameters elegantly while masking your personal information:
-
-```cpp
-/**
- * @file config.h
- * @brief Network credentials and MQTT topic configurations.
- */
-
-#ifndef CONFIG_H
-#define CONFIG_H
-
-// Network Identification Keys (Abstracted for Security)
-const char *ssid     = "YOUR_SECURE_WIFI_SSID";       
-const char *password = "YOUR_WIFI_WPA2_PASSWORD";   
-
-// MQTT Server Infrastructure 
-const char *mqtt_broker   = "your-secure-broker-subdomain.emqxsl.com";
-const char *mqtt_username = "AUTHORIZED_GATEWAY_USER";
-const char *mqtt_password = "SECURE_BROKER_PASSWORD";
-const int mqtt_port       = 8883; // Encrypted MQTTS Port
-
-// --- MQTT TOPICS ARCHITECTURE ---
-const char *topic_command  = "emss/esp32/pump";    // Inbound subscriber control route
-const char *topic_feedback = "emss/esp32/status";  // Outbound operational state transmission
-const char *topic_flow     = "emss/esp32/flowrate"; // Outbound continuous telemetry matrix
-
-#endif
     └── secure_broker_ca.pem   # Secure TLS certificate verification blueprint
+
