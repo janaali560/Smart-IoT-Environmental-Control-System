@@ -1,4 +1,4 @@
-# Smart-IoT-Environmental-Control-System
+
 # Smart IoT Environmental Control System & Automated Gateway 🌐
 
 **Author:** Jana Abdelrehim  
